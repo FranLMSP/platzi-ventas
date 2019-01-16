@@ -41,6 +41,7 @@ def _print_welcome():
 	print('[C]reate client')
 	print('[D]reate client')
 	print('[U]pdate client')
+	print('[D]elete client')
 
 
 if __name__ == '__main__':
@@ -54,7 +55,9 @@ if __name__ == '__main__':
 		create_client(client_name)
 		list_clients()
 	elif command == 'D':
-		pass
+		client_name = _get_client_name()
+		update_client(client_name, '')
+		list_clients()
 	elif command == 'U':
 		client_name = _get_client_name()
 		new_name = input('What is the new name of the client? ')
